@@ -1,4 +1,4 @@
-//Binary tree sort 
+//Binary tree
 #include<stdlib.h>
 #include<stdio.h>
 
@@ -41,6 +41,18 @@ void print_inorder(node * tree)
     }
 }
 
+
+void deltree(node * tree)
+{
+    if (tree)
+    {
+        deltree(tree->left);
+        deltree(tree->right);
+        free(tree);
+    }
+}
+
+
 void main()
 {
     node *root;
@@ -52,9 +64,9 @@ void main()
     /* Inserting nodes into tree */
     printf("enter number of element to be inserted:");
     scanf("%d",&nn);
-    printf("/n")
+    printf("\n");
     for(i=0;i<nn;i++){
-    printf("//nenter element to be inserted:");
+    printf("\nenter element to be inserted:");
     scanf("%d",&n);
     insert(&root, n);
     }
@@ -64,6 +76,6 @@ void main()
 
     printf("Sorted array:\n");
     print_inorder(root);
-}
 
+}
 
