@@ -1,4 +1,4 @@
-//Binary tree
+//Binary tree sort 
 #include<stdlib.h>
 #include<stdio.h>
 
@@ -41,18 +41,6 @@ void print_inorder(node * tree)
     }
 }
 
-
-void deltree(node * tree)
-{
-    if (tree)
-    {
-        deltree(tree->left);
-        deltree(tree->right);
-        free(tree);
-    }
-}
-
-
 void main()
 {
     node *root;
@@ -76,6 +64,6 @@ void main()
 
     printf("Sorted array:\n");
     print_inorder(root);
-
+}
 
 
