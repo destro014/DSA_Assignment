@@ -57,17 +57,19 @@ void main()
 {
     node *root;
     node *tmp;
-    //int i;
+    int n,nn;
+    int i;
 
     root = NULL;
     /* Inserting nodes into tree */
-    insert(&root, 9);
-    insert(&root, 4);
-    insert(&root, 15);
-    insert(&root, 6);
-    insert(&root, 12);
-    insert(&root, 17);
-    insert(&root, 2);
+    printf("enter number of element to be inserted:");
+    scanf("%d",&nn);
+    printf("/n")
+    for(i=0;i<nn;i++){
+    printf("//nenter element to be inserted:");
+    scanf("%d",&n);
+    insert(&root, n);
+    }
 
     /* Printing nodes of tree in sorted form*/
 
@@ -77,6 +79,3 @@ void main()
 
 
 
-    /* Deleting all nodes of tree */
-    deltree(root);
-}
